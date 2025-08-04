@@ -1,0 +1,82 @@
+// Rush Hour Flag
+Rush Hour Flag = 
+IF(
+    'bike_sharing_clean'[hr] IN {7,8,9,17,18,19},
+    "Rush Hour",
+    "Regular Hour"
+)
+
+// Is Night Time
+Is Night = 
+IF(
+    'bike_sharing_clean'[hr] >= 22 || 'bike_sharing_clean'[hr] <= 5,
+    1,
+    0
+)
+
+// Weather Names
+Weather Name = 
+SWITCH(
+    'bike_sharing_clean'[weathersit],
+    1, "Clear/Partly Cloudy",
+    2, "Mist/Cloudy",
+    3, "Light Rain/Snow",
+    4, "Heavy Rain/Snow",
+    "Unknown"
+)
+
+// Season Names
+Season Name = 
+SWITCH(
+    'bike_sharing_clean'[season],
+    1, "Spring",
+    2, "Summer", 
+    3, "Fall",
+    4, "Winter",
+    "Unknown"
+)
+
+// Weekday Names
+Weekday Name = 
+SWITCH(
+    'bike_sharing_clean'[weekday],
+    0, "Sunday",
+    1, "Monday",
+    2, "Tuesday", 
+    3, "Wednesday",
+    4, "Thursday",
+    5, "Friday",
+    6, "Saturday",
+    "Unknown"
+)
+
+// Total Rentals
+Total Rentals = SUM('bike_sharing_clean'[cnt])
+
+// Average Hourly Demand
+Average Hourly Demand = AVERAGE('bike_sharing_clean'[cnt])
+
+// Peak Hour Performance
+Peak Hour Average = 
+CALCULATE(
+    AVERAGE('bike_sharing_clean'[cnt]),
+    'bike_sharing_clean'[Rush Hour Flag] = "Rush Hour"
+)
+
+// Weather Impact
+Clear Weather Demand = 
+CALCULATE(
+    AVERAGE('bike_sharing_clean'[cnt]),
+    'bike_sharing_clean'[Weather Name] = "Clear/Partly Cloudy"
+)
+
+// Temperature Correlation (Simplified)
+Temperature Impact = 
+CALCULATE(
+    AVERAGE('bike_sharing_clean'[cnt]),
+    'bike_sharing_clean'[temp] > 0.6
+) - 
+CALCULATE(
+    AVERAGE('bike_sharing_clean'[cnt]),
+    'bike_sharing_clean'[temp] <= 0.6
+)
