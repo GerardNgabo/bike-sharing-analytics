@@ -174,6 +174,9 @@ jupyter>=1.0.0
    - Interaction terms
    - Domain-specific indicators
 
+![alt text](./notebook/plots/plot1.png)
+![alt text](./notebook/plots/plot2.png)
+
 ### **Phase 3: Machine Learning Modeling**
 1. **Model Selection**
    - Linear Regression (baseline)
@@ -190,6 +193,8 @@ jupyter>=1.0.0
    - RMSE (Root Mean Square Error)
    - MAE (Mean Absolute Error)
    - R² Score (Coefficient of Determination)
+
+   ![alt text](./notebook/plots/plot3.png)
 
 ### **Phase 4: Advanced Analytics**
 1. **Customer Segmentation**
@@ -253,6 +258,7 @@ jupyter>=1.0.0
    - Peak hours: 8 AM and 5-6 PM (commuter rush)
    - Weekend vs weekday distinct usage patterns
    - Seasonal variation: Summer > Fall > Spring > Winter
+   
 
 2. **🌤️ Weather Impact:**
    - Temperature correlation: +0.627 (strong positive)
