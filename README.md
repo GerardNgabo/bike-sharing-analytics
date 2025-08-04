@@ -324,16 +324,10 @@ jupyter>=1.0.0
 
 ---
 
-## 📚 **References & Citations**
+## 📚 **References**
 
 ### **Academic Sources**
 1. UCI Machine Learning Repository: Bike Sharing Dataset. (2013). Retrieved from https://archive.ics.uci.edu/ml/datasets/bike+sharing+dataset
-
-### **Technical References**
-- Scikit-learn: Machine Learning in Python, Pedregosa et al., JMLR 12, pp. 2825-2830, 2011
-- Pandas: McKinney, W. (2010). Data structures for statistical computing in python
-- Power BI: Microsoft Corporation (2023). Power BI Documentation
-
 ---
 
 ## 📞 **Contact Information**
@@ -345,7 +339,6 @@ jupyter>=1.0.0
 
 
 ### **Project Links**
-- **🌐 Live Dashboard:** [Power BI Online Link]
 - **📊 Data Source:** [UCI ML Repository](https://archive.ics.uci.edu/dataset/275/bike+sharing+dataset)
 
 ---
