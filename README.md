@@ -324,34 +324,6 @@ jupyter>=1.0.0
 
 ---
 
-## 🧪 **Testing & Validation**
-
-### **Model Validation**
-```bash
-# Run model tests
-python -m pytest tests/test_model_performance.py -v
-
-# Cross-validation results
-python src/model_validation.py --cv-folds 5
-```
-
-### **Data Quality Checks**
-```bash
-# Data integrity tests  
-python tests/test_data_processing.py
-
-# Statistical validation
-python src/statistical_tests.py
-```
-
-### **Performance Benchmarks**
-- **Data Processing:** < 30 seconds for full dataset
-- **Model Training:** < 5 minutes for ensemble
-- **Prediction Speed:** < 100ms for single prediction
-- **Dashboard Load:** < 10 seconds for all visuals
-
----
-
 ## 📚 **References & Citations**
 
 ### **Academic Sources**
